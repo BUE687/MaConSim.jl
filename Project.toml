@@ -1,0 +1,13 @@
+name = "MaConSim"
+uuid = "488e26a8-187f-41da-b3d5-becf04519c94"
+authors = ["Ferdinand Campe"]
+version = "0.1.0"
+
+[compat]
+julia = "1.7"
+
+[extras]
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test"]
