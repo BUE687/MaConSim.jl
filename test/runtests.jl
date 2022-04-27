@@ -1,5 +1,7 @@
 using MaConSim
 using Test
+using Graphs
+using Agents
 
 @testset "MaConSim.jl" begin
     # Write your tests here.
@@ -9,7 +11,9 @@ using Test
 
         model = MaConModel(RobotModel=Robot, ChannelModel=ChannelModel)
 
-        robot = Robot(0, "Allice")
+        @test isa(model, MaConModel)
+
+        robot = Robot(0, "Alice")
 
         add_agent_to_model!(model, robot)
 
@@ -27,12 +31,22 @@ using Test
 
         @test ne(model.comunication_network) == 0
 
-        model.comunication_network[:Simon, :Hans] = ChannelModel("Da")
+        add_edge!(model, "Alice", "Bob", ChannelModel("Hier"))
 
-        #comunication_network[:Hans, :Simon] = ChannelModel("Hier")
+        @test ne(model.comunication_network) == 1
 
-        #rem_edge!(comunication_network, :Hans, :Simon)
+        add_edge!(model, "Bob", "Alice", ChannelModel("Da"))
 
-        @test 1==1
+        @test ne(model.comunication_network) == 2
+
+        rem_edge!(model, "Alice", "Bob")
+
+        @test ne(model.comunication_network) == 1
+
+        rem_edge!(model, "Bob", "Alice")
+
+        @test ne(model.comunication_network) == 0
+
+        #@test 1==1
     end
 end
