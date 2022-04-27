@@ -6,11 +6,11 @@ DocMeta.setdocmeta!(MaConSim, :DocTestSetup, :(using MaConSim); recursive=true)
 makedocs(;
     modules=[MaConSim],
     authors="Ferdinand Campe",
-    repo="https://github.com/FBUE687/MaConSim.jl/blob/{commit}{path}#{line}",
+    repo="https://github.com/BUE687/MaConSim.jl/blob/{commit}{path}#{line}",
     sitename="MaConSim.jl",
     format=Documenter.HTML(;
         prettyurls=get(ENV, "CI", "false") == "true",
-        canonical="https://FBUE687.github.io/MaConSim.jl",
+        canonical="https://BUE687.github.io/MaConSim.jl",
         assets=String[],
     ),
     pages=[
