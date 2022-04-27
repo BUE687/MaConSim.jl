@@ -38,6 +38,6 @@ function add_agent_to_model!(
     model.comunication_network[Symbol(robot.name)] = robot
 end
 
-function add_edge!(model::MaConModel, from::String, to::String, channel::ChannelModel)
+function add_channel!(model::MaConModel, from::String, to::String, channel::ChannelModel)
     model.comunication_network[Symbol(from), Symbol(to)] = channel
 end

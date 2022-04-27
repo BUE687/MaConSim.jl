@@ -31,11 +31,11 @@ using Agents
 
         @test ne(model.comunication_network) == 0
 
-        add_edge!(model, "Alice", "Bob", ChannelModel("Hier"))
+        add_channel!(model, "Alice", "Bob", ChannelModel("Hier"))
 
         @test ne(model.comunication_network) == 1
 
-        add_edge!(model, "Bob", "Alice", ChannelModel("Da"))
+        add_channel!(model, "Bob", "Alice", ChannelModel("Da"))
 
         @test ne(model.comunication_network) == 2
 

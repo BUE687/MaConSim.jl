@@ -12,7 +12,7 @@ include("model.jl")
 export Robot
 export ChannelModel
 export MaConModel
-export add_edge!
+export add_channel!
 export rem_edge!
 export add_agent_to_model!
 # Write your package code here.
