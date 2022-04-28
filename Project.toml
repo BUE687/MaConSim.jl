@@ -11,6 +11,7 @@ MetaGraphsNext = "fa8bd995-216d-47f1-8a91-f3b68fbeb377"
 OrderedCollections = "bac558e1-5e72-5ebc-8fee-abe8a469f55d"
 
 [compat]
+MetaGraphsNext = "0.3"
 julia = "1.7"
 
 [extras]
